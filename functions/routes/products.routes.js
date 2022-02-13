@@ -14,6 +14,7 @@ router.get("/api/products", async (req, res) => {
         const response = docs.map((doc) => ({
             id: doc.id,
             name: doc.data().name,
+            price: doc.data().price,
         }));
 
         return res.status(200).json(response);

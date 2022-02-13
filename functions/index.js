@@ -13,6 +13,7 @@ admin.initializeApp({
 });
 
 // Routes
+app.use(require("./routes/product.routes"));
 app.use(require("./routes/products.routes"));
 
 exports.app = functions.https.onRequest(app);
